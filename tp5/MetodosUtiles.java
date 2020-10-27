@@ -437,9 +437,7 @@ public class MetodosUtiles {
     }
 
     public static int cargarNumero_Int_MayorOIgual(int min) {
-        Scanner teclado = new Scanner(System.in);
         int numeroCasteado;
-        String numString = null;
         do {
         numeroCasteado = cargarNumero_Int();
         if (numeroCasteado <= min) System.out.println("Error. Ingrese un valor entero mayor que " + min);
@@ -449,9 +447,7 @@ public class MetodosUtiles {
     }
     
     public static int cargarNumero_Int_MenorOIgual(int max) {
-        Scanner teclado = new Scanner(System.in);
         int numeroCasteado;
-        String numString = null;
         do {
         numeroCasteado = cargarNumero_Int();
         if (numeroCasteado >= max) System.out.println("Error. Ingrese un valor entero menor que " + max);
@@ -463,12 +459,10 @@ public class MetodosUtiles {
         
         
     public static int cargarNumero_Int_MenorOIgual_MayorOIgual(int min, int max) {
-        Scanner teclado = new Scanner(System.in);
         int numeroCasteado;
-        String numString = null;
         do {
         numeroCasteado = cargarNumero_Int();
-        if (numeroCasteado <= max) System.out.println("Error. Ingrese un valor entero menor que " + max + " y mayor que " + min);
+        if (numeroCasteado > max || numeroCasteado < min) System.out.println("Error. Ingrese un valor entero menor que " + max + " y mayor que " + min);
         }
         while (numeroCasteado < min || numeroCasteado > max /*|| num > 2147483647 || num < -2147483648*/);
         return numeroCasteado;
