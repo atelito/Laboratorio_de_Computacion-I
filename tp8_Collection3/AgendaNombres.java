@@ -1,4 +1,4 @@
-package tp8;
+package tp8_Collection3;
 
 import java.util.*;
 
@@ -68,7 +68,6 @@ public class AgendaNombres {
 					if (salirCargaPersonas.equalsIgnoreCase("NO")) break;
 				}
 			}	
-			sc.close();
 		}
 	}
 
@@ -106,7 +105,6 @@ public class AgendaNombres {
                 System.out.println("Numero no valido, ingrese numero de " + dimension + " cifras");
             }
         }
-        teclado.close();
         return String_to_int(numero);
     }
 
