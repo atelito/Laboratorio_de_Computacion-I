@@ -5,7 +5,6 @@
  */
 package tp1;
 
-import java.util.Scanner;
 
 /**
  *
@@ -18,9 +17,7 @@ public class Ej7 {
      */
     public static void main(String[] args) {
         //EJ 7
-        //Muestra los números del 1 al 100 (ambos incluidos). Usa un bucle while
-        Scanner sc = new Scanner(System.in);
-        
+        //Muestra los números del 1 al 100 (ambos incluidos). Usa un bucle while        
         int i;
         i = 1;
         

@@ -17,7 +17,7 @@ public class MenuRestaurant {
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        ArrayList<Plato> menuPlatos = new ArrayList();
+        ArrayList<Plato> menuPlatos = new ArrayList<Plato>();
 
         System.out.println("INGRESO DE PLATOS DEL MENU");
         while(true){

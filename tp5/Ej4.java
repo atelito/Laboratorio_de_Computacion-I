@@ -301,14 +301,6 @@ public static void imprimirMatriz_Int (int [][] arreglo) {
 }
 
 
-private static String completarConEspacios(String cadena){
-    int cantidadEspacios = 6 - cadena.length();
-    for(int i=0; i < cantidadEspacios; i++){
-        cadena += " ";
-    }
-    return cadena;
-}
-
 
 //OPERACIONES ARREGLOS Y MATRICES////////////////////////////////////////////////////////////////////////////
 

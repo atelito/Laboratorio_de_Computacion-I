@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package tp6_Collections;
-import java.util.*;
 /**
  *
  * @author axelp

@@ -14,7 +14,6 @@ public class Ej4 {
         Scanner sc = new Scanner(System.in);
         
         double num;
-        int resultado = 0;
         int cantidad200 = 0;
         int cantidad100 = 0;
         int cantidad50 = 0;

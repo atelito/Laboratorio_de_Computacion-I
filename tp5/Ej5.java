@@ -17,21 +17,21 @@ public class Ej5 {
      */
     public static void main(String[] args) {
         /*Codifique un algoritmo que solicite un 2 valores enteros mayores o iguales a 2, que se
-        corresponden a cantidad de filas y columnas. Cree un arreglo de tamaño[X,Y]de tipo
-        entero, el tamaño se corresponde a los 2 valores enteros ingresados inicialmente.
-        Solicite al usuario que ingrese números enteros para cargar cada una de las celdas de
+        corresponden a cantidad de filas y columnas. Cree un arreglo de tamaÃ±o[X,Y]de tipo
+        entero, el tamaÃ±o se corresponde a los 2 valores enteros ingresados inicialmente.
+        Solicite al usuario que ingrese nÃºmeros enteros para cargar cada una de las celdas de
         la matriz. Finalizada la carga calcule el promedio entero de los elementos asignados y
         cargados en la matriz. Para terminar determine si el promedio calculado se encuentra
-        asignado en alguna de las celdas, si es así indique la posición o posiciones
-        correspondientes, caso contrario muestre el mensaje “No se encontró ninguna
-        coincidencia”.
+        asignado en alguna de las celdas, si es asÃ­ indique la posiciÃ³n o posiciones
+        correspondientes, caso contrario muestre el mensaje â€œNo se encontrÃ³ ninguna
+        coincidenciaâ€�.
                         Ejemplo: Ingreso 3 y 4 como valores enteros
                         Creo la matriz 3 filas por 4 columnas y cargo los valores:
                         3 15 6 9
                         6 13 4 4
                         14 8 5 7
                         El promedio entero es: 7
-                        El valor 7 se encuentra en la posición con índice (2,3) o Fila 3, Columna 4*/
+                        El valor 7 se encuentra en la posiciÃ³n con Ã­ndice (2,3) o Fila 3, Columna 4*/
         
         System.out.println("Ingrese valor para fila");
         int fila = cargarNumeroIntCorrecto_MayorOIgual(2);
@@ -46,11 +46,11 @@ public class Ej5 {
             for (int j=0; j< matriz[0].length; j++){
                 if (promedio == matriz[i][j]){
                     encontrado = true;
-                    System.out.println("El valor " + promedio + " se encuentra en la posición con índice " + "(" + i + "," + j + ")" + " o Fila " + (i+1) + ", Columna " + (j+1));
+                    System.out.println("El valor " + promedio + " se encuentra en la posiciÃ³n con Ã­ndice " + "(" + i + "," + j + ")" + " o Fila " + (i+1) + ", Columna " + (j+1));
                 }
             }
         }
-        if (!encontrado) System.out.println("No se encontró ninguna coincidencia");
+        if (!encontrado) System.out.println("No se encontrÃ³ ninguna coincidencia");
 
         
 
@@ -82,7 +82,7 @@ public static void ordenarInsercion(int[] A, String orden) {
             }
         }
         else {
-            //System.out.println("Sin orden definido, se ordenará de menor a mayor");
+            //System.out.println("Sin orden definido, se ordenarÃ¡ de menor a mayor");
             while (j >= 0 && A[j] > valor){
                 A[j+1] = A[j];
                 j--;
@@ -154,15 +154,15 @@ public static void ordenarPorSeleccion(int [] A, String orden) {
 }
 
 public static void ordenarQuickSort(int [] A, int izq, int der) {
-    //En la primera llamada recibirá los valores izq = 0, der = A.lenght - 1
+    //En la primera llamada recibirÃ¡ los valores izq = 0, der = A.lenght - 1
 
 
     int pivote=A[izq]; // tomamos primer elemento como pivote
-    int i=izq;         // i realiza la búsqueda de izquierda a derecha
-    int j=der;         // j realiza la búsqueda de derecha a izquierda
+    int i=izq;         // i realiza la bÃºsqueda de izquierda a derecha
+    int j=der;         // j realiza la bÃºsqueda de derecha a izquierda
     int aux;
    
-    while(i < j){                          // mientras no se crucen las búsquedas                                   
+    while(i < j){                          // mientras no se crucen las bÃºsquedas                                   
        while(A[i] <= pivote && i < j) i++; // busca elemento mayor que pivote
        while(A[j] > pivote) j--;           // busca elemento menor que pivote
        if (i < j) {                        // si no se han cruzado                      
@@ -189,18 +189,18 @@ public static void busquedaSecuencialEntero(int[] A, int num) {
     // recorremos la lista, revisando cada elemento de la misma, para ver
     // si es el alumno a.
     for (int i = 1; i < A.length - 1; i++){
-    // comparamos el alumno de la posición actual con el alumno buscado: a
+    // comparamos el alumno de la posiciÃ³n actual con el alumno buscado: a
         if (A[i] == num){
             // encontramos el alumno buscado
             seEncontro = true;
         }
     // si nunca se cumple L[i] == a, entonces la variable que indica si se
-    // encontró o no el alumno: seEncontró, quedará valiendo falso.
+    // encontrÃ³ o no el alumno: seEncontrÃ³, quedarÃ¡ valiendo falso.
     }
     if (seEncontro = false){
-        System.out.println("El número " + num + " NO está en el arreglo");
+        System.out.println("El nÃºmero " + num + " NO estÃ¡ en el arreglo");
     }
-    else System.out.println("El número " + num + " SI está en el arreglo");
+    else System.out.println("El nÃºmero " + num + " SI estÃ¡ en el arreglo");
 
 }
 
@@ -249,14 +249,6 @@ public static void imprimirMatriz_Int (int [][] arreglo) {
     System.out.println("|-----------------------|");
 }
 
-
-private static String completarConEspacios(String cadena){
-    int cantidadEspacios = 6 - cadena.length();
-    for(int i=0; i < cantidadEspacios; i++){
-        cadena += " ";
-    }
-    return cadena;
-}
 
 
 //OPERACIONES ARREGLOS Y MATRICES////////////////////////////////////////////////////////////////////////////

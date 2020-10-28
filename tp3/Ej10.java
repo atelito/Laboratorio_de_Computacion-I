@@ -34,7 +34,6 @@ ARRAY3 = (posición 0 del arreglo 1 * posición 0 del arreglo 2) +
         */
 
 
-        Scanner teclado = new Scanner(System.in);
         //int dimF = 1;
         int dimC = 5;
         //int dimF2 = 1;

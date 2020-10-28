@@ -139,13 +139,13 @@ public class CargaDDJJStockAgroquimico {
     public static String cargaNombre(String codigo) {
         Scanner sc = new Scanner(System.in);
         String nombre = "";
-        boolean salir = false;
-            for (int i = 0; i < agroquimicos.length; i++) {
+        for (int i = 0; i < agroquimicos.length; i++) {
                 if (codigo.equals(agroquimicos[i][0])) {
                     nombre = agroquimicos[i][1];
                     break;
                 }
             }
+        sc.close();
         return nombre;
     }
     
@@ -248,48 +248,48 @@ public class CargaDDJJStockAgroquimico {
     public static double cargarNumero_double_MayorOIgual(int min) {
         Scanner teclado = new Scanner(System.in);
         double numeroCasteado;
-        String numString = null;
         do {
             numeroCasteado = cargarNumero_double();
             if (numeroCasteado <= min)
                 System.out.println("Error. Ingrese un valor entero mayor que " + min);
         } while (numeroCasteado <= min /* || num > 2147483647 || num < -2147483648 */);
+        teclado.close();
         return numeroCasteado;
     }
 
     public static int cargarNumero_Int_MayorOIgual(int min) {
         Scanner teclado = new Scanner(System.in);
         int numeroCasteado;
-        String numString = null;
         do {
             numeroCasteado = cargarNumero_Int();
             if (numeroCasteado <= min)
                 System.out.println("Error. Ingrese un valor entero mayor que " + min);
         } while (numeroCasteado <= min /* || num > 2147483647 || num < -2147483648 */);
+        teclado.close();
         return numeroCasteado;
     }
 
     public static int cargarNumero_Int_MenorOIgual(int max) {
         Scanner teclado = new Scanner(System.in);
         int numeroCasteado;
-        String numString = null;
         do {
             numeroCasteado = cargarNumero_Int();
             if (numeroCasteado <= max)
                 System.out.println("Error. Ingrese un valor entero menor que " + max);
         } while (numeroCasteado > max /* || num > 2147483647 || num < -2147483648 */);
+        teclado.close();
         return numeroCasteado;
     }
 
     public static int cargarNumero_Int_MenorOIgual_MayorOIgual(int min, int max) {
         Scanner teclado = new Scanner(System.in);
         int numeroCasteado;
-        String numString = null;
         do {
             numeroCasteado = cargarNumero_Int();
             if (numeroCasteado <= max)
                 System.out.println("Error. Ingrese un valor entero menor que " + max + " y mayor que " + min);
         } while (numeroCasteado < min || numeroCasteado > max /* || num > 2147483647 || num < -2147483648 */);
+        teclado.close();
         return numeroCasteado;
     }
 
@@ -428,7 +428,8 @@ public class CargaDDJJStockAgroquimico {
 
     //////// Double ////////
     // de Double a int
-    public static int Double_to_int(Double num) {
+    @SuppressWarnings("deprecation")
+	public static int Double_to_int(Double num) {
         Double obj = new Double(num);
         int numCasteado = obj.intValue();
         return numCasteado;

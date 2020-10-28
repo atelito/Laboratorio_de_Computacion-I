@@ -5,7 +5,6 @@
  */
 package tp3;
 
-import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -25,7 +24,6 @@ public class Ej7 {
         */
 
 
-        Scanner teclado = new Scanner(System.in);
         //System.out.println("Ingrese dimension del arreglo entero");
         //int dim = teclado.nextInt();
         int dim = 10;

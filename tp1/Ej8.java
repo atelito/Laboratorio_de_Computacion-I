@@ -5,7 +5,6 @@
  */
 package tp1;
 
-import java.util.Scanner;
 
 /**
  *
@@ -19,7 +18,6 @@ public class Ej8 {
     public static void main(String[] args) {
         //EJ 
         //Haz el mismo ejercicio anterior con un bucle for
-        Scanner sc = new Scanner(System.in);
         
         int i;
                 

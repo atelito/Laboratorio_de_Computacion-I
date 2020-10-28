@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package tp7_Collections2;
-import java.util.*;
 
 public class Nota {
     private String catedra;

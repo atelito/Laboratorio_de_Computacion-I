@@ -114,7 +114,6 @@ static ArrayList<Celda> matrizCuadrada = new ArrayList<Celda>();
     }
 
     public static int cargarNumero_Int_MayorOIgual(int min) {
-        Scanner teclado = new Scanner(System.in);
         int numeroCasteado;
         do {
         numeroCasteado = cargarNumero_Int();
@@ -125,7 +124,6 @@ static ArrayList<Celda> matrizCuadrada = new ArrayList<Celda>();
     }
    
     public static int cargarNumero_Int_MenorOIgual(int max) {
-        Scanner teclado = new Scanner(System.in);
         int numeroCasteado;
         do {
         numeroCasteado = cargarNumero_Int();

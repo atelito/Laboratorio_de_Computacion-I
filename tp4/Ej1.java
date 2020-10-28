@@ -27,7 +27,6 @@ public class Ej1 {
         País: Italia Ciudades: Roma Napoles Sicilia
         */
 
-        Scanner teclado = new Scanner(System.in);
         String [][] matrizPaisCiudad = getMatrizString(4, 4);
         imprimirMatrizStringEnLinea(matrizPaisCiudad);
         }

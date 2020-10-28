@@ -40,7 +40,6 @@ public class Ej11 {
         if (contrasenaGuardada != contrasenaIngresada){
             do{
                 System.out.println("ContraseÃ±a incorrecta, vuelva a ingresar contraseÃ±a");
-            String v = sc.nextLine();
             i = i + 1;            
             }
             while (contrasenaGuardada != contrasenaIngresada || i<3);

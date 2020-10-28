@@ -26,7 +26,6 @@ public class Ej3 {
         d) cuántos de los números son menores que el promedio aritmético
     */
         
-        Scanner teclado = new Scanner(System.in);
         int salir = 0;
         ArrayList<Integer> valores = new ArrayList<>();
         System.out.println("Generando numeros aleatorios...");

@@ -5,7 +5,6 @@
  */
 package tp3;
 
-import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -48,7 +47,6 @@ public class Ej8 {
 
 
     public static int getSumaArregloInt (int [] arregloInt, int dim) {
-        Scanner teclado = new Scanner(System.in);
         int suma = 0;
         for (int i = 0; i < dim; i++) {
             suma += arregloInt[i];
@@ -57,7 +55,6 @@ public class Ej8 {
     }
 
     public static double getPromedioArregloInt (int [] arregloInt, int dim) {
-        Scanner teclado = new Scanner(System.in);
         double promedio = 0;
         for (int i = 0; i < dim; i++) {
             promedio += arregloInt[i];
