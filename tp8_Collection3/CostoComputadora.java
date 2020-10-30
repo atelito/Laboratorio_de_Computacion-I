@@ -25,14 +25,14 @@ public class CostoComputadora {
                 System.out.println("Ingrese precio del componente " + componente.getComponente());
                 componente.setPrecio(cargarNumero_double_MayorOIgual(1));
                 computadora.agregarComponentes(componente);
-                System.out.println("�Desea seguir cargando componentes a la computadora " + computadora.getMarca()
+                System.out.println("¿Desea seguir cargando componentes a la computadora " + computadora.getMarca()
                         + "?, escriba \"NO\" para terminar");
                 salirCargaComponentes = sc.nextLine();
                 if (salirCargaComponentes.equalsIgnoreCase("NO"))
                     break;
             }
             imprimirCarga(computadora);
-            System.out.println("�Desea cotizar una nueva computadora?, escriba \"NO\" para terminar");
+            System.out.println("¿Desea cotizar una nueva computadora?, escriba \"NO\" para terminar");
             salirCargaComputadoras = sc.nextLine();
             if (salirCargaComputadoras.equalsIgnoreCase("NO"))
                 break;
