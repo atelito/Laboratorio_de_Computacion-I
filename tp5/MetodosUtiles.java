@@ -358,7 +358,7 @@ public class MetodosUtiles {
         return String_to_int(numero);
     }
 
-    public static int cargarNumero_Int() {
+    public static int getNumero_Int() {
         Scanner teclado = new Scanner(System.in);
         int numeroCasteado;
         boolean errorEntradaDatos = false;
@@ -380,7 +380,7 @@ public class MetodosUtiles {
         return numeroCasteado;
     }
     
-    public static float cargarNumero_Float() {
+    public static float getNumero_Float() {
         Scanner teclado = new Scanner(System.in);
         float numeroCasteado;
         boolean errorEntradaDatos = false;
@@ -407,7 +407,7 @@ public class MetodosUtiles {
         return numeroCasteado;
     }
 
-    public static double cargarNumero_double() {
+    public static double getNumero_double() {
         Scanner teclado = new Scanner(System.in);
         double numeroCasteado;
         boolean errorEntradaDatos = false;
@@ -436,20 +436,20 @@ public class MetodosUtiles {
         return numeroCasteado;
     }
 
-    public static int cargarNumero_Int_MayorOIgual(int min) {
+    public static int getNumero_Int_MayorOIgual(int min) {
         int numeroCasteado;
         do {
-        numeroCasteado = cargarNumero_Int();
+        numeroCasteado = getNumero_Int();
         if (numeroCasteado <= min) System.out.println("Error. Ingrese un valor entero mayor que " + min);
         }
         while (numeroCasteado <= min /*|| num > 2147483647 || num < -2147483648*/);
         return numeroCasteado;
     }
     
-    public static int cargarNumero_Int_MenorOIgual(int max) {
+    public static int getNumero_Int_MenorOIgual(int max) {
         int numeroCasteado;
         do {
-        numeroCasteado = cargarNumero_Int();
+        numeroCasteado = getNumero_Int();
         if (numeroCasteado >= max) System.out.println("Error. Ingrese un valor entero menor que " + max);
         }
         while (numeroCasteado >= max /*|| num > 2147483647 || num < -2147483648*/);
@@ -458,10 +458,10 @@ public class MetodosUtiles {
 
         
         
-    public static int cargarNumero_Int_MenorOIgual_MayorOIgual(int min, int max) {
+    public static int getNumero_Int_MenorOIgual_MayorOIgual(int min, int max) {
         int numeroCasteado;
         do {
-        numeroCasteado = cargarNumero_Int();
+        numeroCasteado = getNumero_Int();
         if (numeroCasteado > max || numeroCasteado < min) System.out.println("Error. Ingrese un valor entero menor que " + max + " y mayor que " + min);
         }
         while (numeroCasteado < min || numeroCasteado > max /*|| num > 2147483647 || num < -2147483648*/);
@@ -512,7 +512,7 @@ public class MetodosUtiles {
     
         
     public static int leerAnio(){
-        int anio = cargarNumero_Int();
+        int anio = getNumero_Int();
         if(anio > (new Date().getYear() + 1900)){
             System.out.println("El año no puede superar al año actual " + (new Date().getYear() + 1900));
             leerAnio();
@@ -521,7 +521,7 @@ public class MetodosUtiles {
     }
     
     public static int leerMes(int anio){
-        int mes = cargarNumero_Int();
+        int mes = getNumero_Int();
         if(mes < 1 || mes > 12){
             System.out.println("El mes no es valido. Ingrese nuevamente el mes.");
             leerMes(anio);
