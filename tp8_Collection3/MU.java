@@ -1,32 +1,18 @@
+package tp8_Collection3;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tp5;
+
 import java.util.*;
 
 /**
  *
  * @author axelp
  */
-public class MetodosUtiles {
+public class MU {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-    
-        /////////////////////////////////INICIO PROGRAMA/////////////////////////////////////////
-        /////////////////////////////////INICIO PROGRAMA/////////////////////////////////////////
-
-        
-
-        /////////////////////////////////FIN PROGRAMA/////////////////////////////////////////
-        /////////////////////////////////FIN PROGRAMA/////////////////////////////////////////
-    }
-        /////////////////////////////////INICIO METODOS///////////////////////////////////////
-        /////////////////////////////////INICIO METODOS///////////////////////////////////////
 
     //ORDENAMIENTO////////////////////////////////////////////////////////////////////////////
 
@@ -57,8 +43,6 @@ public class MetodosUtiles {
         }
     }
 
-
-
     public static void ordenarBurbuja(int[] A, String orden) {
         int i, j, aux;
         for (i = 0; i < A.length - 1; i++) {
@@ -80,7 +64,6 @@ public class MetodosUtiles {
             }
         }
     }
-
 
     public static void ordenarPorSeleccion(int [] A, String orden) {
         int i, j, menor, mayor, pos, tmp;
@@ -177,15 +160,13 @@ public class MetodosUtiles {
         }
         System.out.println("|-----------------------|");
     }
-
-    
+ 
     public static void imprimirArreglo_Int(int [] arreglo) {
         System.out.println("|-----------------------|");
         for (int i = 0; i < arreglo.length; i++) { System.out.print(" Elemento " + (i + 1)  + "\t" + arreglo[i] + "\n");
         }
         System.out.println("|-----------------------|");
     }
-
 
     public static void imprimirMatriz_String (String [][] arreglo) {
         System.out.println("|-----------------------|");
@@ -200,7 +181,6 @@ public class MetodosUtiles {
         System.out.println("|-----------------------|");
     }
 
-
     public static void imprimirMatriz_Int (int [][] arreglo) {
         System.out.println("|-----------------------|");
         System.out.println("Valores de la Matriz de " + arreglo.length + " fila/s y " + arreglo[0].length + " columna/s");
@@ -214,7 +194,6 @@ public class MetodosUtiles {
         System.out.println("|-----------------------|");
     }
 
-
     public static String completarConEspacios(String cadena){
         int cantidadEspacios = 6 /*PONER ACA LA CANTIDAD DE ESPACIOS QUE NECESITO PARA ALIENEAR*/- cadena.length();
         for(int i=0; i < cantidadEspacios; i++){
@@ -222,7 +201,6 @@ public class MetodosUtiles {
         }
         return cadena;
     }
-
 
     //OPERACIONES ARREGLOS Y MATRICES////////////////////////////////////////////////////////////////////////////
 
@@ -232,13 +210,12 @@ public class MetodosUtiles {
         System.out.println("|-----------------------|");
         for (int i = 0; i < dim; i++) {
                 System.out.println("Ingrese numero entero en posicion " + i);
-                arregloInt[i] = teclado.nextInt();
+                arregloInt[i] = getNumero_Int();
         }
         System.out.println("Fin carga arreglo");
         System.out.println("|-----------------------|");
         return arregloInt;
     }
-
 
     public static String [] getArreglo_String (int dim) {
         Scanner teclado = new Scanner(System.in);
@@ -246,13 +223,12 @@ public class MetodosUtiles {
         System.out.println("|-----------------------|");
         for (int i = 0; i < dim; i++) {
                 System.out.println("Ingrese cadena en posicion " + i);
-                arregloInt[i] = teclado.next();
+                arregloInt[i] = teclado.nextLine();
         }
         System.out.println("Fin carga arreglo");
         System.out.println("|-----------------------|");
         return arregloInt;
     }
-
 
     public static int[][] getMatriz_Int (int dimFila, int dimColumna) {
         Scanner teclado = new Scanner(System.in);
@@ -261,14 +237,13 @@ public class MetodosUtiles {
         for (int i = 0; i < dimFila; i++) {
             for (int j = 0; j <dimColumna; j++) {
                 System.out.println("Ingrese numero entero en fila " + i + ", columna " + j);
-                matrizInt[i][j] = teclado.nextInt();
+                matrizInt[i][j] = getNumero_Int();
             }
         }
         System.out.println("Fin carga matriz");
         System.out.println("|-----------------------|");
         return matrizInt;
     }
-
 
     public static String[][] getMatriz_String (int dimFila, int dimColumna) {
         Scanner teclado = new Scanner(System.in);
@@ -284,7 +259,6 @@ public class MetodosUtiles {
         return matrizString;
     }
     
-    
     public static void sumarFilaMatriz (int [][] matriz, int numFila) {
         int sumaFila = 0;
         for (int j = 0; j < matriz[0].length; j++){
@@ -292,7 +266,6 @@ public class MetodosUtiles {
         }
         System.out.println("La suma de los valores de la fila " + (numFila+1) + " es: " + sumaFila);
     }
-
 
     public static void sumarColumnaMatriz (int [][] matriz, int numColumna) {
         int sumaColumna = 0;
@@ -338,7 +311,6 @@ public class MetodosUtiles {
         System.out.println("El promedio de los valores de la matriz es: " + sumaDiagonal + " " + contador + " " + promedio);
     }
 
-    
     //VALIDACIONES////////////////////////////////////////////////////////////////////////////
 
     
@@ -455,9 +427,7 @@ public class MetodosUtiles {
         while (numeroCasteado >= max /*|| num > 2147483647 || num < -2147483648*/);
         return numeroCasteado;
     }
-
-        
-        
+   
     public static int getNumero_Int_MenorOIgual_MayorOIgual(int min, int max) {
         int numeroCasteado;
         do {
@@ -468,7 +438,6 @@ public class MetodosUtiles {
         return numeroCasteado;
     }    
         
-    
     public static boolean esInt(String numero){
         try{
             int numeroCasteado = Integer.parseInt(numero);  
@@ -479,7 +448,6 @@ public class MetodosUtiles {
         return true;
         }
     
-
     public static boolean esDouble(String numero){
         try{
             double numeroCasteado = Double.parseDouble(numero);  
@@ -495,7 +463,6 @@ public class MetodosUtiles {
         return true;
         }
 
-
     public static boolean esFloat(String numero){
         try{
             float numeroCasteado = Float.parseFloat(numero);  
@@ -508,8 +475,6 @@ public class MetodosUtiles {
         }
         return true;
         }
-
-    
         
     public static int leerAnio(){
         int anio = getNumero_Int();
@@ -624,8 +589,7 @@ public class MetodosUtiles {
         Double obj = new Double(num);
         double numCasteado = obj.doubleValue();
         return numCasteado;
-    }
-        
+    }  
     
     // de Double a Integer
     public static Integer Double_to_Integer(Double num){
@@ -662,7 +626,6 @@ public class MetodosUtiles {
         return numCasteado;
     }
 
-    
     // de Integer a String
     public static String Integer_to_String(Integer num){
         Integer obj = new Integer(num);
@@ -672,4 +635,18 @@ public class MetodosUtiles {
 
     ////////////////////FIN METODOS///////////////////////////////////////////////////////
     ////////////////////FIN METODOS///////////////////////////////////////////////////////
+    public static void main(String[] args) {
+    
+        /////////////////////////////////INICIO PROGRAMA/////////////////////////////////////////
+        /////////////////////////////////INICIO PROGRAMA/////////////////////////////////////////
+
+    	int a = getNumero_Int();
+    	System.out.println(a);
+    	
+        /////////////////////////////////FIN PROGRAMA/////////////////////////////////////////
+        /////////////////////////////////FIN PROGRAMA/////////////////////////////////////////
+    }
+        /////////////////////////////////INICIO METODOS///////////////////////////////////////
+        /////////////////////////////////INICIO METODOS///////////////////////////////////////
+
 }
