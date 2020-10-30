@@ -49,10 +49,10 @@ public class CostoComputadora {
                 + completarConEspacios("SubTotal"));
         for (ComponenteCPU i : computadora.getComponentes()) {
             System.out.println("");
-            System.out.println(i.getComponente() + "\t\t\t" + i.getMarca() + "\t\t\t" + i.getCantidad() + "\t\t\t"
-                    + i.getPrecio() + "\t\t\t" + i.SubTotal(i.getCantidad(), i.getPrecio()));
+            System.out.println(completarConEspacios(i.getComponente()) + "t" + completarConEspacios(i.getMarca()) + "\t" + completarConEspacios(int_to_String(i.getCantidad())) + "\t"
+                    + completarConEspacios(double_to_String(i.getPrecio())) + "\t" + completarConEspacios(double_to_String(i.SubTotal(i.getCantidad(),i.getPrecio()))));
         }
-        System.out.println("\t\t\t\t\t\t\t\t\t\t\t" + "Costo Total " + computadora.calculoTotal());
+        System.out.println("\t\t\t\t\t\t\t\t\t\t" + "Costo Total " + computadora.calculoTotal());
         precioSugerido(computadora.calculoTotal());
         System.out.println("-----------------------------------");
     }
@@ -73,6 +73,17 @@ public class CostoComputadora {
             cadena += " ";
         }
         return cadena;
+    }
+    // de int a String
+    public static String int_to_String(int num){
+        String numCasteado = String.valueOf(num);
+        return numCasteado;
+    }
+
+    // de double a String
+    public static String double_to_String(double num){
+        String numCasteado = String.valueOf(num);
+        return numCasteado;
     }
 
     public static int cargarNumero_Int() {
