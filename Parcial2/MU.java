@@ -1,4 +1,4 @@
-package tp8_Collection3;
+package Parcial2;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -316,17 +316,6 @@ public class MU {
 
     //VALIDACIONES////////////////////////////////////////////////////////////////////////////
 
-	public static String getStringNoVacioNoNulo() {
-		Scanner teclado = new Scanner(System.in);
-		String string = null;
-		while (string == null ||string.length() < 1) {
-			string = teclado.nextLine();
-			if (string.length() < 1) {
-				System.out.println("Error. Debe ingresar un dato. No puede estar vacio");
-			}
-		}		
-		return string;
-	}
     
     public static int getNumero_Int_ConDimension(int dimension){
         Scanner teclado = new Scanner(System.in);
@@ -639,7 +628,7 @@ public class MU {
     	///////////////////////////////// INICIO PROGRAMA //////////////////////////////////////
     	///////////////////////////////// INICIO PROGRAMA //////////////////////////////////////
 
-
+    	
     	
         ///////////////////////////////// FIN PROGRAMA /////////////////////////////////////////
         ///////////////////////////////// FIN PROGRAMA /////////////////////////////////////////
