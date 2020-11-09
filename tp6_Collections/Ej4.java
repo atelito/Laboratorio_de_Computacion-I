@@ -19,7 +19,7 @@ public class Ej4 {
         
     /*
     Codifique una aplicación que permita almacenar palabras en un
-    ArrayList<String> hasta que se ingrese la palabra “salir�?, al finalizar
+    ArrayList<String> hasta que se ingrese la palabra “salir�?, al finalizar
     muestre por pantalla:
         a) Las palabras ingresadas
         b) Indicar cuál de las palabras ingresadas posee más caracteres
@@ -29,14 +29,13 @@ public class Ej4 {
     */
         
         Scanner teclado = new Scanner(System.in);
-        boolean existe = false;
-        List<String> valores = new ArrayList<>();
-        System.out.println("Ingrese palabras aleatorias...");
-        while (!existe){
+        ArrayList<String> valores = new ArrayList<>();
+        System.out.println("Ingrese palabras aleatorias... Esciba \"salir\" para terminar");
+        while (true){
             valores.add(teclado.nextLine());
             if (valores.contains("salir")){
                 valores.remove("salir");
-                existe = true;
+                break;
             }
         }
         /* double mayor = valores.get(0);
@@ -66,19 +65,15 @@ public class Ej4 {
             if (palabraMasLarga.length() < valores.get(i).length()){
             palabraMasLarga = valores.get(i);
             }
-            //if (){
-
         }
         
         System.out.println("La primera palabra introducida que posee mas caracteres es: " + palabraMasLarga);
         // List listaString = Arrays.asList(valores.toArray()); PARA DE UN ARRAY HACER USO DE COLECIONES DE ARREGLOS
-        Set<String> listaPalabras = new HashSet<>(valores);
+        HashSet<String> listaPalabras = new HashSet<>(valores);
         int repetida = 0;
-
         //bucle for each para hacerlo de manera mas dinamica
         //Recorre todos los objetos de tipo "String" en la coleccion "listaPalabras"
         for(String palabraRepetida: listaPalabras){
-            //System.out.println("La palabra " + palabraRepetida + " se repite " + Collections.frequency(valores,palabraRepetida));
             // Si hay una palabra repetida que la variable repetida sume 1. Cuando al menos exista una repetida se detona el if final
             if (Collections.frequency(valores,palabraRepetida) != 1){
                 repetida = 1;

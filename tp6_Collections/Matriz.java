@@ -6,6 +6,8 @@
 package tp6_Collections;
 import java.util.*;
 
+import Parcial2.MU;
+
 
 /**
  *
@@ -26,38 +28,48 @@ static ArrayList<Celda> matrizCuadrada = new ArrayList<Celda>();
      Codifique un programa que solicite al usuario un valor para la celda y que
         solicite la posición donde se desea almacenar el valor, cree una instancia de la clase Celda, 
         asigne los valores cargados por el usuario y agregue la instancia a la lista matrizCuadrada; 
-        repita este proceso hasta que el usuario ingrese como valor la cadena “FIN�?.
+        repita este proceso hasta que el usuario ingrese como valor la cadena “FIN�?.
      Muestre por pantalla los valores cargados en matrizCuadrada.
      Codifique un método que reciba como parámetro los valores fila y columna y retorne el valor almacenado,
         en caso de que la fila y la columna no exista retorne el mensaje “La fila y columna indicada no ha sido
-        asignada�?
+        asignada�?
     */
     Scanner teclado = new Scanner(System.in);
-    
-    boolean salir = false;
-    while (!salir){
-        System.out.println("Ingrese valor para almacenar en celda. \"FIN\" para terminar");
-        String valor = teclado.next();
-        if(valor.equalsIgnoreCase("FIN")){
-            break;
-        }
+    String salir;
+    while (true){
+    	Celda celda = new Celda();
+        System.out.println("Ingrese valor para almacenar en celda.");
+        celda.setValor(teclado.nextLine());
         System.out.println("Ingrese fila donde almacenar en celda");
-        int fila = cargarNumero_Int_MayorOIgual(1);
+        celda.setFila(cargarNumero_Int_MayorOIgual(1));
         System.out.println("Ingrese columna donde almacenar en celda");
-        int columna = cargarNumero_Int_MayorOIgual(1);
-        Celda celda = new Celda(fila, columna, valor);
+        celda.setColumna(cargarNumero_Int_MayorOIgual(1));
+        //Celda celda = new Celda(fila, columna, valor);
         matrizCuadrada.add(celda);
         System.out.println("---Celda agregada correctamente---");
-    }
+        System.out.println("Desea seguir cargando celdas? Escriba NO para salir");
+        salir = teclado.nextLine();
+        if (salir.equalsIgnoreCase("NO")) break;
+        }
     System.out.println("");
-    System.out.println("---Imprimiendo matriz cargada---");
-    imprimirMatriz_String(cargarMatriz());
+    System.out.println("---Imprimiendo valores de celda cargados---");
+    // Convierto el ArrayList en una matriz y la imprimo
+    //imprimirMatriz_String(cargarMatriz());
+    
+    //Imprimo directamente los valores del ArrayList
+    int columna = 0, fila = 0;
+    for (Celda celdita : matrizCuadrada) {
+    	System.out.println(celdita.getValor());
+    }
     System.out.println("Ingrese fila a buscar");
-    int fila = cargarNumero_Int_MayorOIgual(1);
+    fila = cargarNumero_Int_MayorOIgual(1);
     System.out.println("Ingrese columna a buscar");
-    int columna = cargarNumero_Int_MayorOIgual(1);
-    buscarValor(fila, columna);
-
+    columna = cargarNumero_Int_MayorOIgual(1);
+    // Busco valor, metodo 1
+    //buscarValor(fila, columna);
+    
+    // Busco valor metodo 2
+    buscoValor(fila, columna);
     }
 
     
@@ -194,4 +206,18 @@ static ArrayList<Celda> matrizCuadrada = new ArrayList<Celda>();
         }
         if(encontrado == false) System.out.println("La fila y columna indicada no ha sido asignada");
     }
+    
+    public static void buscoValor(int fila, int columna){
+        boolean encontrado = false;
+        for(Celda celda : matrizCuadrada) {
+    		if(celda.getFila() == fila && celda.getColumna() == columna) {
+    			System.out.println("Valor encontrado: " + celda.getValor() + " en fila " + celda.getFila() + " y columna " + celda.getColumna());
+    			encontrado = true;
+    			break;
+    		}
+    	}
+        if(encontrado == false) System.out.println("La fila y columna indicada no ha sido asignada");
+    }
+    
+    
 }
